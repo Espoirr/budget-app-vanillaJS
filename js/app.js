@@ -16,3 +16,26 @@ class UI {
     this.itemID = 0;
   }
 }
+function eventListeners() {
+  const budgetForm = document.getElementById("budget-form");
+  const expenseForm = document.getElementById("expense-form");
+  const expenseList = document.getElementById("expense-list");
+
+  // new instance of UI Class
+  const ui = new UI();
+
+  // budget form submit
+  budgetForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+  });
+  // expense form submit
+  expenseForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+  });
+  // list form submit
+  expenseList.addEventListener("click", function() {});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  eventListeners();
+});
